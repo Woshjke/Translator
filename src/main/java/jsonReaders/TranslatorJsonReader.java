@@ -1,10 +1,7 @@
-package main.java.jsonReaders;
+package jsonReaders;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import main.java.response.TranslatorResponse;
-
-import java.util.List;
+import response.TranslatorResponse;
 
 public class TranslatorJsonReader {
     public TranslatorResponse getTranslatorResponse(String json) {
