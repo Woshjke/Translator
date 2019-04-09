@@ -1,6 +1,6 @@
 package main.java;
 
-import main.java.Translator.*;
+import main.java.translator.*;
 import java.io.IOException;
 
 public class Main {
