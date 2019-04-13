@@ -1,4 +1,4 @@
-package response;
+package sample.response;
 
 import java.util.Arrays;
 
@@ -33,9 +33,10 @@ public class TranslatorResponse {
         this.lang = lang;
     }
 
-    public String[] getText() {
-        return text;
+    public String getText() {
+        return Arrays.toString(text).replaceAll("[\\[\\]\"]", "" );
     }
+
 
     public void setText(String[] text) {
         this.text = text;
@@ -46,7 +47,7 @@ public class TranslatorResponse {
         return "TranslatorResponse {" +
                 "Код операции: '" + code + '\'' +
                 ", Язык перевода: '" + lang + '\'' +
-                ", Переведенный текст: " + Arrays.toString(text) +
+                ", Переведенный текст: " + getText() +
                 '}';
     }
 }

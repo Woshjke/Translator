@@ -1,7 +1,7 @@
-package jsonReaders;
+package sample.jsonReaders;
 
 import com.google.gson.Gson;
-import response.TranslatorResponse;
+import sample.response.TranslatorResponse;
 
 public class TranslatorJsonReader {
     public TranslatorResponse getTranslatorResponse(String json) {
