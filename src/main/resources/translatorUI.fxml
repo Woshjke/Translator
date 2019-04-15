@@ -6,22 +6,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UI.TranslatorUIController">
-   <children>
-      <Button fx:id="translateButton" layoutX="264.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" text="Translate">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Button>
-      <TextField fx:id="textToTranslateField" layoutX="14.0" layoutY="166.0" prefHeight="68.0" prefWidth="236.0" promptText="Input text here">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="translatedTextField" layoutX="350.0" layoutY="166.0" prefHeight="68.0" prefWidth="236.0">
-         <font>
-            <Font size="18.0" />
-         </font></TextField>
-      <ComboBox fx:id="languages" layoutX="14.0" layoutY="14.0" prefWidth="150.0" visibleRowCount="5" />
-   </children>
+<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.TranslatorUIController">
+   <Button fx:id="translateButton" layoutX="264.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" text="Translate" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="263.0">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <TextField fx:id="textToTranslateField" layoutX="14.0" layoutY="166.0" prefHeight="68.0" prefWidth="236.0" promptText="Input text here" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="166.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="translatedTextField" layoutX="350.0" layoutY="166.0" prefHeight="68.0" prefWidth="236.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="166.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </TextField>
+   <ComboBox fx:id="languages" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="150.0" visibleRowCount="5" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0" />
+   <Button fx:id="dictionaryButton" layoutX="513.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" text="Dictionary" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" />
 </AnchorPane>

@@ -4,18 +4,26 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import sample.UI.TranslatorUIController;
 import sample.commands.DictionaryCommand;
 import sample.commands.GetLanguagesCommand;
 import sample.commands.TranslateCommand;
 import sample.translator.Translator;
 
+import java.io.IOException;
+
 public class Main extends Application {
 
     private static Translator translator = new Translator();
-    private static User user = new User(new TranslateCommand(translator), new DictionaryCommand(translator), new GetLanguagesCommand(translator));
+
+    private static User user = new User(
+            new TranslateCommand(translator),
+            new DictionaryCommand(translator),
+            new GetLanguagesCommand(translator)
+    );
+
     private static FXMLLoader loader;
 
     public static Translator getTranslator() {
@@ -35,15 +43,16 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-
-        loader = new FXMLLoader(getClass().getResource("/translatorUI.fxml"));
-        Parent root = loader.load();
-        TranslatorUIController controller = loader.getController();
-
-        primaryStage.setTitle("Translator");
-        primaryStage.getIcons().add(new Image("icon.png"));
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.show();
+    public void start(Stage primaryStage) {
+        try {
+            loader = new FXMLLoader(getClass().getResource("/translatorUI.fxml"));
+            Parent root = loader.load();
+            primaryStage.setTitle("Translator");
+            primaryStage.getIcons().add(new Image("icon.png"));
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+        } catch (IOException e) {
+            new Message(e.getMessage(), Alert.AlertType.ERROR).show();
+        }
     }
 }

@@ -1,11 +1,10 @@
-package sample.jsonReaders;
+package sample.mappers;
 
 import com.google.gson.Gson;
 import sample.response.LanguagesResponse;
-import sample.response.TranslatorResponse;
 
-public class LangsJsonReader {
-    public LanguagesResponse getLanguageResponce(String json) {
+public class LangMapper {
+    public LanguagesResponse getLanguageResponse(String json) {
         Gson gson = new Gson();
         return gson.fromJson(json, LanguagesResponse.class);
     }
