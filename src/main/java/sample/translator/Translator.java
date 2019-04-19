@@ -1,5 +1,9 @@
 package sample.translator;
 
+import com.google.cloud.translate.Language;
+import com.google.cloud.translate.Translate;
+import com.google.cloud.translate.TranslateOptions;
+import com.google.cloud.translate.Translation;
 import sample.mappers.DictionaryMapper;
 import sample.mappers.LangMapper;
 import sample.mappers.TranslatorMapper;
@@ -13,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.List;
 
 public class Translator {
 
@@ -20,6 +25,7 @@ public class Translator {
     private String key = "key=trnsl.1.1.20190409T183919Z.e60acd8daff6f806.f569e10ca83dbbcd54d77d8a953032818eca7282";
 
     public Translator() {
+
     }
 
     public Translator(String key) {
@@ -39,7 +45,8 @@ public class Translator {
     }
 
 
-    public TranslatorResponse translate(String lang, String text) throws IOException {
+    public TranslatorResponse translateByYandex(String text, String sourceLanguage, String targetLanguage)
+            throws IOException {
 
         URL urlObj = new URL(URL + key);
         HttpsURLConnection connection = (HttpsURLConnection) urlObj.openConnection();
@@ -47,7 +54,7 @@ public class Translator {
         connection.setRequestMethod("POST");
         connection.setDoOutput(true);
         DataOutputStream dataOutputStream = new DataOutputStream(connection.getOutputStream());
-        dataOutputStream.writeBytes("text=" + URLEncoder.encode(text, "UTF-8") + "&lang=" + lang);
+        dataOutputStream.writeBytes("text=" + URLEncoder.encode(text, "UTF-8") + "&lang=" + sourceLanguage + "-" + targetLanguage);
 
         InputStream response = connection.getInputStream();
         String json = new java.util.Scanner(response).nextLine();
@@ -56,9 +63,25 @@ public class Translator {
         return reader.getTranslatorResponse(json);
     }
 
-    public DictionaryResponse getFromDictionary(String lang, String text) throws IOException {
+    public String translateByGoogle (String text, String sourceLanguage, String targetLanguage)
+            throws com.google.cloud.translate.TranslateException {
 
-        // TODO: 15.04.2019 Доделать
+        Translate translate = TranslateOptions.getDefaultInstance().getService();
+        //setKey();
+        List<Language> languages = translate.listSupportedLanguages();
+
+        Translation translation =
+                translate.translate(
+                        text,
+                        Translate.TranslateOption.sourceLanguage(sourceLanguage),
+                        Translate.TranslateOption.targetLanguage(targetLanguage)
+                );
+        return translation.getTranslatedText();
+    }
+
+    public DictionaryResponse getFromDictionary(String lang, String text)
+            throws IOException {
+
         String dictionaryURL = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1." +
                 "20190410T165952Z.f8e90fde03f36468.a3eb7708da1dc060f4d5706dd97034c47d0344c0";
         URL dictionaryUrlObj = new URL(dictionaryURL);

@@ -1,7 +1,5 @@
 package sample.response.dictionary;
 
-import java.util.Arrays;
-
 public class DictionaryResponse {
     private Object head;
 
@@ -35,7 +33,13 @@ public class DictionaryResponse {
 
     @Override
     public String toString() {
-        return "DictionaryResponse: " + "\n" +
-                Arrays.toString(def);
+//        StringBuilder finalStr = new StringBuilder();
+//        finalStr.append("DictionaryResponse:\n");
+//        for (Def value : def) {
+//            if (value != null) {
+//                finalStr.append(value.toString()  + "\n");
+//            }
+//        }
+        return def[0].toString();
     }
 }
