@@ -1,7 +1,5 @@
 package sample.response.dictionary;
 
-import java.util.Arrays;
-
 public class Def {
 
 
@@ -58,13 +56,37 @@ public class Def {
 
     @Override
     public String toString() {
+        StringBuilder finalStr = new StringBuilder();
+        finalStr.append("def:\n");
+        if (tr != null) {
+            for (Container value : tr) {
+                if (value != null) {
+                    finalStr.append(value.toString() + "\n");
+                }
+            }
+        }
+        if (syn != null) {
+            for (Container value : syn) {
+                if (value != null) {
+                    finalStr.append(value.toString() + "\n");
+                }
+            }
+        }
+        if (mean != null) {
+            for (Container value : mean) {
+                if (value != null) {
+                    finalStr.append(value.toString() + "\n");
+                }
+            }
+        }
+        if (ex != null) {
+            for (Container value : ex) {
+                if (value != null) {
+                    finalStr.append(value.toString() + "\n");
+                }
+            }
+        }
 
-        String finalText = "";
-
-        if (tr != null) {finalText += Arrays.toString(tr);}
-        if (syn != null) {finalText += Arrays.toString(syn);}
-        if (mean != null) {finalText += Arrays.toString(mean);}
-        if (ex != null) {finalText += Arrays.toString(ex);}
-        return  finalText;
+        return finalStr.toString();
     }
 }

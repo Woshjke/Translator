@@ -2,10 +2,13 @@ package sample.ui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import sample.Main;
+import javafx.scene.control.*;
+import sample.AppStarter;
+import sample.Message;
 
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Map;
@@ -29,10 +32,22 @@ public class TranslatorUIController {
     private TextField translatedTextField;
 
     @FXML
-    private ComboBox<String> languages;
+    private ComboBox<String> sourceLanguage;
+
+    @FXML
+    private ComboBox<String> targetLanguage;
 
     @FXML
     private Button dictionaryButton;
+
+    @FXML
+    private RadioButton yandexRadioButton;
+
+    @FXML
+    private RadioButton googleRadioButton;
+
+    @FXML
+    private Button openLogFileButton;
 
     private Map<String, String> langMap;
 
@@ -49,9 +64,6 @@ public class TranslatorUIController {
         return translatedTextField;
     }
 
-    public ComboBox<String> getLanguages() {
-        return languages;
-    }
 
     public Map<String, String> getLangMap() {
         return langMap;
@@ -73,22 +85,54 @@ public class TranslatorUIController {
         this.translatedTextField = translatedTextField;
     }
 
-    public void setLanguages(ComboBox<String> languages) {
-        this.languages = languages;
+    public ComboBox<String> getSourceLanguage() {
+        return sourceLanguage;
     }
 
+    public void setSourceLanguage(ComboBox<String> sourceLanguage) {
+        this.sourceLanguage = sourceLanguage;
+    }
+
+    public ComboBox<String> getTargetLanguage() {
+        return targetLanguage;
+    }
+
+    public void setTargetLanguage(ComboBox<String> targetLanguage) {
+        this.targetLanguage = targetLanguage;
+    }
+
+    public RadioButton getYandexRadioButton() {
+        return yandexRadioButton;
+    }
+
+    public void setYandexRadioButton(RadioButton yandexRadioButton) {
+        this.yandexRadioButton = yandexRadioButton;
+    }
+
+    public RadioButton getGoogleRadioButton() {
+        return googleRadioButton;
+    }
+
+    public void setGoogleRadioButton(RadioButton googleRadioButton) {
+        this.googleRadioButton = googleRadioButton;
+    }
 
     @FXML
     void initialize() {
-        assert translateButton != null : "fx:id=\"translateButton\" was not injected: check your FXML file 'sample.fxml'.";
-        assert textToTranslateField != null : "fx:id=\"textToTranslateField\" was not injected: check your FXML file 'sample.fxml'.";
-        assert translatedTextField != null : "fx:id=\"translatedTextField\" was not injected: check your FXML file 'sample.fxml'.";
-        assert languages != null : "fx:id=\"languages\" was not injected: check your FXML file 'translatorUI.fxml'.";
-        assert dictionaryButton != null : "fx:id=\"dictionaryButton\" was not injected: check your FXML file 'translatorUI.fxml'.";
-        Main.getUser().getLanguages();
-
-        translateButton.setOnAction(event -> Main.getUser().translateText());
-
-        dictionaryButton.setOnAction(event -> Main.getUser().getInfoFromDictionary());
+        translateButton.setOnAction(event -> AppStarter.getUser().translateText());
+        dictionaryButton.setOnAction(event -> AppStarter.getUser().getInfoFromDictionary());
+        googleRadioButton.setOnAction(event -> yandexRadioButton.setSelected(false));
+        yandexRadioButton.setOnAction(event -> googleRadioButton.setSelected(false));
+        yandexRadioButton.setSelected(true);
+        openLogFileButton.setOnAction(event -> {
+            try {
+                File log = new File("log.txt");
+                Desktop.getDesktop().edit(log);
+            } catch (IOException e) {
+                new Message("Cannot open log file", Alert.AlertType.ERROR);
+            }
+        });
+        sourceLanguage.setValue("Русский");
+        targetLanguage.setValue("Английский");
     }
 }

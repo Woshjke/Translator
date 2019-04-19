@@ -1,6 +1,5 @@
 package sample.commands;
 
-import com.sun.xml.internal.ws.api.pipe.ContentType;
 import javafx.scene.control.Alert;
 import sample.Message;
 import sample.response.dictionary.DictionaryResponse;
@@ -18,11 +17,17 @@ public class DictionaryCommand implements Command {
 
     @Override
     public void execute() {
-        try {
-            DictionaryResponse response = translator.getFromDictionary("ru-ru", "Привет");
-            System.out.println(response);
-        } catch (IOException e) {
-            new Message(e.getMessage(), Alert.AlertType.ERROR).show();
-        }
+
+        Runnable runnable = () -> {
+            try {
+                DictionaryResponse response = translator.getFromDictionary("en-ru", "time");
+                new Message(response.toString(), Alert.AlertType.INFORMATION).show();
+            } catch (IOException e) {
+                new Message(e.getMessage(), Alert.AlertType.ERROR).show();
+            }
+        };
+
+        //Platform.runLater(runnable);
+        runnable.run();
     }
 }
