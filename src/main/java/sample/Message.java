@@ -4,22 +4,21 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 
+import java.io.*;
+
+
 public class Message {
+
     private Alert alert;
     private String content;
     private Alert.AlertType alertType;
 
-    public Alert getAlert() {
-        return alert;
-    }
-
-    public void setAlert(Alert alert) {
-        this.alert = alert;
-    }
-
     public Message(String content, Alert.AlertType alertType) {
+        this.content = content;
+        this.alertType = alertType;
 
         TextArea textArea = new TextArea(content);
+        textArea.setStyle("-fx-font-size: 15px");
         textArea.setEditable(false);
         textArea.setWrapText(true);
         GridPane gridPane = new GridPane();
@@ -27,9 +26,6 @@ public class Message {
         gridPane.add(textArea, 0, 0);
         alert = new Alert(alertType);
         alert.getDialogPane().setContent(gridPane);
-        alert.setX(AppStarter.getRoot().getScene().getWindow().getX() + 50);
-        alert.setY(AppStarter.getRoot().getScene().getWindow().getY() + 50);
-
 
         switch (alertType) {
             case ERROR:
@@ -47,7 +43,21 @@ public class Message {
         }
     }
 
+    private void writeErrorsLog(String content) {
+        try {
+            File file = new File("error.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream(file, true);
+            fileOutputStream.write("Error: ".getBytes());
+            fileOutputStream.write(content.getBytes());
+            fileOutputStream.write("\n".getBytes());
+            fileOutputStream.close();
+        } catch (IOException e) {
+            new Message(e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+
     public void show() {
-        alert.showAndWait();
+        alert.show();
+        writeErrorsLog(content);
     }
 }

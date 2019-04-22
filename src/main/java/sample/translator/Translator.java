@@ -4,6 +4,8 @@ import com.google.cloud.translate.Language;
 import com.google.cloud.translate.Translate;
 import com.google.cloud.translate.TranslateOptions;
 import com.google.cloud.translate.Translation;
+import javafx.scene.control.Alert;
+import sample.Message;
 import sample.mappers.DictionaryMapper;
 import sample.mappers.LangMapper;
 import sample.mappers.TranslatorMapper;
@@ -15,6 +17,7 @@ import javax.net.ssl.HttpsURLConnection;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Member;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
@@ -48,6 +51,11 @@ public class Translator {
     public TranslatorResponse translateByYandex(String text, String sourceLanguage, String targetLanguage)
             throws IOException {
 
+        if (text.isEmpty()) {
+            new Message("Empty text field. Write something!", Alert.AlertType.ERROR);
+            return null;
+        }
+
         URL urlObj = new URL(URL + key);
         HttpsURLConnection connection = (HttpsURLConnection) urlObj.openConnection();
 
@@ -66,6 +74,11 @@ public class Translator {
     public String translateByGoogle (String text, String sourceLanguage, String targetLanguage)
             throws com.google.cloud.translate.TranslateException {
 
+        if (text.isEmpty()) {
+            new Message("Empty text field. Write something!", Alert.AlertType.ERROR);
+            return null;
+        }
+
         Translate translate = TranslateOptions.getDefaultInstance().getService();
         //setKey();
         List<Language> languages = translate.listSupportedLanguages();
@@ -81,6 +94,11 @@ public class Translator {
 
     public DictionaryResponse getFromDictionary(String lang, String text)
             throws IOException {
+
+        if (text.isEmpty()) {
+            new Message("Empty text field. Write something!", Alert.AlertType.ERROR);
+            return null;
+        }
 
         String dictionaryURL = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1." +
                 "20190410T165952Z.f8e90fde03f36468.a3eb7708da1dc060f4d5706dd97034c47d0344c0";
@@ -99,7 +117,8 @@ public class Translator {
         return reader.getDictionaryResponse(json);
     }
 
-    public LanguagesResponse getLanguages() throws IOException {
+    public LanguagesResponse getLanguages()
+            throws IOException {
 
         String LangURL = "https://translate.yandex.net/api/v1.5/tr.json/getLangs?";
         URL urlObj = new URL(LangURL + key);

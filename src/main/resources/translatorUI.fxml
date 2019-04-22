@@ -7,26 +7,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.TranslatorUIController">
+<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="469.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.TranslatorUIController">
    <Button fx:id="translateButton" layoutX="264.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" text="Translate" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="263.0">
       <font>
-         <Font size="13.0" />
+         <Font name="System Bold" size="13.0" />
       </font>
    </Button>
-   <TextField fx:id="textToTranslateField" layoutX="14.0" layoutY="166.0" prefHeight="68.0" prefWidth="236.0" promptText="Input text here" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="166.0">
+   <TextField fx:id="textToTranslateField" layoutX="8.0" layoutY="201.0" prefHeight="68.0" prefWidth="300.0" promptText="Input text here" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="201.0">
       <font>
          <Font size="18.0" />
       </font>
    </TextField>
-   <TextField fx:id="translatedTextField" layoutX="350.0" layoutY="166.0" prefHeight="68.0" prefWidth="236.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="166.0">
+   <TextField fx:id="translatedTextField" editable="false" layoutX="408.0" layoutY="201.0" prefHeight="68.0" prefWidth="300.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="201.0">
       <font>
          <Font size="18.0" />
       </font>
    </TextField>
-   <ComboBox fx:id="sourceLanguage" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="150.0" visibleRowCount="5" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0" />
-   <Button fx:id="dictionaryButton" layoutX="513.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" text="Dictionary" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" />
-   <RadioButton fx:id="yandexRadioButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" text="Yandex" />
-   <RadioButton fx:id="googleRadioButton" layoutX="14.0" layoutY="331.0" mnemonicParsing="false" text="Google" />
-   <ComboBox fx:id="targetLanguage" layoutX="436.0" layoutY="30.0" prefHeight="27.0" prefWidth="150.0" visibleRowCount="5" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
-   <Button fx:id="openLogFileButton" layoutX="511.0" layoutY="270.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" text="Open Log" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="16.0" />
+   <ComboBox fx:id="sourceLanguage" layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="150.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0" />
+   <Button fx:id="dictionaryButton" layoutX="412.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="89.0" text="Dictionary" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="158.0">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Button>
+   <RadioButton fx:id="yandexRadioButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="89.0" text="Yandex" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0">
+      <font>
+         <Font size="15.0" />
+      </font></RadioButton>
+   <RadioButton fx:id="googleRadioButton" layoutX="105.0" layoutY="417.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="89.0" text="Google" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="105.0">
+      <font>
+         <Font size="15.0" />
+      </font></RadioButton>
+   <ComboBox fx:id="targetLanguage" layoutX="436.0" layoutY="30.0" prefHeight="27.0" prefWidth="150.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
+   <Button fx:id="openLogFileButton" layoutX="572.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="79.0" text="History" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="14.0">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Button>
+   <Button fx:id="openErrorsButton" layoutX="572.0" layoutY="352.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="79.0" text="Errors" AnchorPane.bottomAnchor="72.0" AnchorPane.rightAnchor="14.0">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Button>
 </AnchorPane>

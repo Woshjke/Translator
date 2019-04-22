@@ -33,10 +33,7 @@ public class TranslatorResponse {
         this.lang = lang;
     }
 
-    public String getText() {
-        return Arrays.toString(text).replaceAll("[\\[\\]\"]", "" );
-    }
-
+    public String getText() { return Arrays.toString(text).replaceAll("[\\[\\]\"]", ""); }
 
     public void setText(String[] text) {
         this.text = text;
@@ -44,7 +41,7 @@ public class TranslatorResponse {
 
     @Override
     public String toString() {
-        return "TranslatorResponse {" +
+        return  "TranslatorResponse {" +
                 "Код операции: '" + code + '\'' +
                 ", Язык перевода: '" + lang + '\'' +
                 ", Переведенный текст: " + getText() +
