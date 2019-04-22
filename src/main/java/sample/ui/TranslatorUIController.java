@@ -2,15 +2,11 @@ package sample.ui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.control.*;
 import sample.AppStarter;
-import sample.Message;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -68,17 +64,13 @@ public class TranslatorUIController {
         return textToTranslateField;
     }
 
-    public void setTextToTranslateField(TextField textToTranslateField) {
-        this.textToTranslateField = textToTranslateField;
-    }
+    public void setTextToTranslateField(TextField textToTranslateField) { this.textToTranslateField = textToTranslateField; }
 
     public TextField getTranslatedTextField() {
         return translatedTextField;
     }
 
-    public void setTranslatedTextField(TextField translatedTextField) {
-        this.translatedTextField = translatedTextField;
-    }
+    public void setTranslatedTextField(TextField translatedTextField) { this.translatedTextField = translatedTextField; }
 
     public ComboBox<String> getSourceLanguage() {
         return sourceLanguage;

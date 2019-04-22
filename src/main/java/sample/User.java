@@ -1,9 +1,6 @@
 package sample;
 
-import javafx.scene.control.Alert;
 import sample.commands.Command;
-
-import java.io.IOException;
 
 public class User {
 
