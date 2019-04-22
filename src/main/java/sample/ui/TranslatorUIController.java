@@ -2,6 +2,7 @@ package sample.ui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import sample.AppStarter;
@@ -49,6 +50,9 @@ public class TranslatorUIController {
     @FXML
     private Button openLogFileButton;
 
+    @FXML
+    private Button openErrorsButton;
+
     private Map<String, String> langMap;
 
 
@@ -56,29 +60,20 @@ public class TranslatorUIController {
         return translateButton;
     }
 
-    public TextField getTextToTranslateField() {
-        return textToTranslateField;
-    }
-
-    public TextField getTranslatedTextField() {
-        return translatedTextField;
-    }
-
-
-    public Map<String, String> getLangMap() {
-        return langMap;
-    }
-
-    public void setLangMap(Map<String, String> langMap) {
-        this.langMap = langMap;
-    }
-
     public void setTranslateButton(Button translateButton) {
         this.translateButton = translateButton;
     }
 
+    public TextField getTextToTranslateField() {
+        return textToTranslateField;
+    }
+
     public void setTextToTranslateField(TextField textToTranslateField) {
         this.textToTranslateField = textToTranslateField;
+    }
+
+    public TextField getTranslatedTextField() {
+        return translatedTextField;
     }
 
     public void setTranslatedTextField(TextField translatedTextField) {
@@ -101,6 +96,14 @@ public class TranslatorUIController {
         this.targetLanguage = targetLanguage;
     }
 
+    public Button getDictionaryButton() {
+        return dictionaryButton;
+    }
+
+    public void setDictionaryButton(Button dictionaryButton) {
+        this.dictionaryButton = dictionaryButton;
+    }
+
     public RadioButton getYandexRadioButton() {
         return yandexRadioButton;
     }
@@ -117,21 +120,32 @@ public class TranslatorUIController {
         this.googleRadioButton = googleRadioButton;
     }
 
+    public Button getOpenLogFileButton() {
+        return openLogFileButton;
+    }
+
+    public void setOpenLogFileButton(Button openLogFileButton) {
+        this.openLogFileButton = openLogFileButton;
+    }
+
+    public Map<String, String> getLangMap() {
+        return langMap;
+    }
+
+    public void setLangMap(Map<String, String> langMap) {
+        this.langMap = langMap;
+    }
+
     @FXML
     void initialize() {
         translateButton.setOnAction(event -> AppStarter.getUser().translateText());
         dictionaryButton.setOnAction(event -> AppStarter.getUser().getInfoFromDictionary());
         googleRadioButton.setOnAction(event -> yandexRadioButton.setSelected(false));
         yandexRadioButton.setOnAction(event -> googleRadioButton.setSelected(false));
+        openLogFileButton.setOnAction(event -> AppStarter.getUser().openTranslationsLog());
+        openErrorsButton.setOnAction(event -> AppStarter.getUser().openErrorsLog());
         yandexRadioButton.setSelected(true);
-        openLogFileButton.setOnAction(event -> {
-            try {
-                File log = new File("log.txt");
-                Desktop.getDesktop().edit(log);
-            } catch (IOException e) {
-                new Message("Cannot open log file", Alert.AlertType.ERROR);
-            }
-        });
+        AppStarter.getUser().getLanguages();
         sourceLanguage.setValue("Русский");
         targetLanguage.setValue("Английский");
     }

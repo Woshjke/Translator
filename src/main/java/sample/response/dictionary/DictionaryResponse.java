@@ -33,13 +33,6 @@ public class DictionaryResponse {
 
     @Override
     public String toString() {
-//        StringBuilder finalStr = new StringBuilder();
-//        finalStr.append("DictionaryResponse:\n");
-//        for (Def value : def) {
-//            if (value != null) {
-//                finalStr.append(value.toString()  + "\n");
-//            }
-//        }
         return def[0].toString();
     }
 }

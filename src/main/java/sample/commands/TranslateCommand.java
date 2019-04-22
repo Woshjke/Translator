@@ -1,6 +1,9 @@
 package sample.commands;
 
 import com.google.cloud.translate.TranslateException;
+import javafx.application.Platform;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -23,59 +26,84 @@ public class TranslateCommand implements Command {
         this.translator = translator;
     }
 
+    private void writeLog(String textToTranslate, String translatedText, String sourceLangAbr, String targetLangAbr) {
+        try {
+            File file = new File("log.txt");
+            boolean writable = file.setWritable(true);
+            if (!writable) {
+                Platform.runLater(() -> new Message("Cannot set file writable!", Alert.AlertType.ERROR).show());
+            }
+            FileOutputStream log = new FileOutputStream(file, true);
+            log.write(sourceLangAbr.getBytes());
+            log.write(": ".getBytes());
+            log.write(textToTranslate.getBytes());
+            log.write(" - ".getBytes());
+            log.write(targetLangAbr.getBytes());
+            log.write(": ".getBytes());
+            log.write(translatedText.getBytes());
+            log.write("\n".getBytes());
+            writable = file.setWritable(false);
+            if (!writable) {
+                Platform.runLater(() -> new Message("Cannot set file not writable!", Alert.AlertType.ERROR).show());
+            }
+            log.close();
+        } catch (IOException e) {
+            Platform.runLater(() -> new Message(e.getMessage(), Alert.AlertType.ERROR).show());
+        }
+    }
+
     @Override
     public void execute() {
-        Runnable runnable = () -> {
-            TranslatorUIController controller = AppStarter.getLoader().getController();
+        Service<Void> backgroundService = new Service<Void>() {
+            @Override
+            protected Task<Void> createTask() {
+                return new Task<Void>() {
+                    @Override
+                    protected Void call() {
+                        TranslatorUIController controller = AppStarter.getLoader().getController();
 
-            try {
-                Map<String, String> langMap = translator.getLanguages().getLangs();
-                String sourceLanguage = controller.getSourceLanguage().getValue();
-                String targetLanguage = controller.getTargetLanguage().getValue();
-                TextField textToTranslateField = controller.getTextToTranslateField();
-                TextField translatedTextField = controller.getTranslatedTextField();
-                RadioButton yandexRadioButton = controller.getYandexRadioButton();
-                RadioButton googleRadioButton = controller.getGoogleRadioButton();
+                        try {
+                            Map<String, String> langMap = translator.getLanguages().getLangs();
+                            String sourceLanguage = controller.getSourceLanguage().getValue();
+                            String targetLanguage = controller.getTargetLanguage().getValue();
+                            TextField textToTranslateField = controller.getTextToTranslateField();
+                            TextField translatedTextField = controller.getTranslatedTextField();
+                            RadioButton yandexRadioButton = controller.getYandexRadioButton();
+                            RadioButton googleRadioButton = controller.getGoogleRadioButton();
+                            String sourceLangAbr = "";
+                            String targetLangAbr = "";
 
-                String sourceLangAbr = "";
-                String targetLangAbr = "";
+                            if (textToTranslateField.getText().isEmpty()) {
+                                Platform.runLater(() -> new Message("Input something", Alert.AlertType.WARNING).show());
+                            }
 
-                for (String iter : langMap.keySet()) {
-                    if (langMap.get(iter).equals(sourceLanguage)) {
-                        sourceLangAbr = iter;
+                            for (String iter : langMap.keySet()) {
+                                if (langMap.get(iter).equals(sourceLanguage)) {
+                                    sourceLangAbr = iter;
+                                }
+                                if (langMap.get(iter).equals(targetLanguage)) {
+                                    targetLangAbr = iter;
+                                }
+                            }
+
+                            if (yandexRadioButton.isSelected()) {
+                                TranslatorResponse response = translator.translateByYandex(textToTranslateField.getText(),
+                                        sourceLangAbr, targetLangAbr);
+                                translatedTextField.setText(response.getText());
+                            } else if (googleRadioButton.isSelected()) {
+                                String response = translator.translateByGoogle(textToTranslateField.getText(), sourceLangAbr, targetLangAbr);
+                                translatedTextField.setText(response);
+                            }
+                            writeLog(textToTranslateField.getText(), translatedTextField.getText(), sourceLangAbr, targetLangAbr);
+
+                        } catch (IOException | TranslateException e) {
+                            Platform.runLater(() -> new Message(e.getMessage(), Alert.AlertType.ERROR).show());
+                        }
+                        return null;
                     }
-                    if (langMap.get(iter).equals(targetLanguage)) {
-                        targetLangAbr = iter;
-                    }
-                }
-
-                if (yandexRadioButton.isSelected()) {
-                    TranslatorResponse response = translator.translateByYandex(textToTranslateField.getText(), sourceLangAbr, targetLangAbr);
-                    translatedTextField.setText(response.getText());
-                } else if (googleRadioButton.isSelected()) {
-                    String response = translator.translateByGoogle(textToTranslateField.getText(), sourceLangAbr, targetLangAbr);
-                    translatedTextField.setText(response);
-                }
-
-                //write in log-file
-                File file = new File("log.txt");
-                file.setWritable(true);
-                FileOutputStream log = new FileOutputStream(file, true);
-                log.write(sourceLangAbr.getBytes());
-                log.write(": ".getBytes());
-                log.write(textToTranslateField.getText().getBytes());
-                log.write(" - ".getBytes());
-                log.write(targetLangAbr.getBytes());
-                log.write(": ".getBytes());
-                log.write(translatedTextField.getText().getBytes());
-                log.write("\n".getBytes());
-                file.setWritable(false);
-                log.close();
-            } catch (IOException | TranslateException e) {
-                new Message(e.getMessage(), Alert.AlertType.ERROR).show();
+                };
             }
         };
-
-        runnable.run();
+        backgroundService.restart();
     }
 }

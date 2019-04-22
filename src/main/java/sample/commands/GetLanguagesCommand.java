@@ -1,5 +1,7 @@
 package sample.commands;
 
+import javafx.application.Platform;
+import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import sample.AppStarter;
@@ -20,25 +22,36 @@ public class GetLanguagesCommand implements Command {
 
     @Override
     public void execute() {
-
-        Runnable runnable = () -> {
-            Map<String, String> langMap;
-            TranslatorUIController controller = AppStarter.getLoader().getController();
-
-            try {
-                langMap = translator.getLanguages().getLangs();
-                langMap.values().forEach(x -> {
-                    controller.getSourceLanguage().getItems().add(x);
-                    controller.getTargetLanguage().getItems().add(x);
-                });
-                controller.getSourceLanguage().getItems().sort(String::compareTo);
-                controller.getTargetLanguage().getItems().sort(String::compareTo);
-                controller.setLangMap(langMap);
-            } catch (IOException e) {
-                new Message(e.getMessage(), Alert.AlertType.ERROR).show();
+        Service<Void> backgroundService = new Service<Void>() {
+            @Override
+            protected Task<Void> createTask() {
+                return new Task<Void>() {
+                    @Override
+                    protected Void call() {
+                        Map<String, String> langMap;
+                        TranslatorUIController controller = AppStarter.getLoader().getController();
+                        try {
+                            langMap = translator.getLanguages().getLangs();
+                        } catch (IOException e) {
+                            Platform.runLater(() -> new Message(
+                                    "Cannot get languages! Check your Internet connection!", Alert.AlertType.ERROR).show()
+                            );
+                            return null;
+                        }
+                        langMap.values().forEach(x -> {
+                            controller.getSourceLanguage().getItems().add(x);
+                            controller.getTargetLanguage().getItems().add(x);
+                        });
+                        Platform.runLater(() -> {
+                            controller.getSourceLanguage().getItems().sort(String::compareTo);
+                            controller.getTargetLanguage().getItems().sort(String::compareTo);
+                        });
+                        controller.setLangMap(langMap);
+                        return null;
+                    }
+                };
             }
         };
-
-        runnable.run();
+        backgroundService.restart();
     }
 }

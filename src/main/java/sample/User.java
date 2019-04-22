@@ -10,34 +10,34 @@ public class User {
     private Command translate;
     private Command getFromDictionary;
     private Command getLanguages;
+    private Command openTranslationsLog;
+    private Command openErrorsLog;
 
-    public User(Command translate, Command getFromDictionary, Command getLanguages) {
+    public User(Command translate, Command getFromDictionary, Command getLanguages, Command openTranslationsLog, Command openErrorsLog) {
         this.translate = translate;
         this.getFromDictionary = getFromDictionary;
         this.getLanguages = getLanguages;
+        this.openTranslationsLog = openTranslationsLog;
+        this.openErrorsLog = openErrorsLog;
     }
 
     public void translateText() {
-        try {
-            translate.execute();
-        } catch (IOException e) {
-            new Message(e.getMessage(), Alert.AlertType.ERROR).show();
-        }
+        translate.execute();
     }
 
     public void getInfoFromDictionary() {
-        try {
-            getFromDictionary.execute();
-        } catch (IOException e) {
-            new Message(e.getMessage(), Alert.AlertType.ERROR).show();
-        }
+        getFromDictionary.execute();
     }
 
     public void getLanguages() {
-        try {
-            getLanguages.execute();
-        } catch (IOException e) {
-            new Message(e.getMessage(), Alert.AlertType.ERROR).show();
-        }
+        getLanguages.execute();
+    }
+
+    public void openTranslationsLog() {
+        openTranslationsLog.execute();
+    }
+
+    public void openErrorsLog() {
+        openErrorsLog.execute();
     }
 }

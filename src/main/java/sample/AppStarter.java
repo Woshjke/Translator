@@ -6,9 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import sample.commands.DictionaryCommand;
-import sample.commands.GetLanguagesCommand;
-import sample.commands.TranslateCommand;
+import sample.commands.*;
 import sample.translator.Translator;
 
 import java.io.IOException;
@@ -20,7 +18,9 @@ public class AppStarter extends Application {
     private static User user = new User(
             new TranslateCommand(translator),
             new DictionaryCommand(translator),
-            new GetLanguagesCommand(translator)
+            new GetLanguagesCommand(translator),
+            new OpenTranslationsLogCommand(translator),
+            new OpenErrorsLogCommand(translator)
     );
 
     private static FXMLLoader loader;
@@ -54,13 +54,11 @@ public class AppStarter extends Application {
             root = loader.load();
             primaryStage.setTitle("Translator");
             primaryStage.getIcons().add(new Image("icon.png"));
-            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.setScene(new Scene(root, 659, 469));
             primaryStage.setResizable(false);
             primaryStage.show();
-            user.getLanguages();
         } catch (IOException e) {
-            System.out.println("Невозможно запустить программу");
-            e.printStackTrace();
+            System.out.println("Cannot start program!" + e.getMessage());
         }
     }
 }
