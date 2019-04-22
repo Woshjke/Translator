@@ -17,7 +17,6 @@ import javax.net.ssl.HttpsURLConnection;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Member;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
@@ -80,7 +79,6 @@ public class Translator {
         }
 
         Translate translate = TranslateOptions.getDefaultInstance().getService();
-        //setKey();
         List<Language> languages = translate.listSupportedLanguages();
 
         Translation translation =

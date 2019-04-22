@@ -13,12 +13,12 @@
          <Font name="System Bold" size="13.0" />
       </font>
    </Button>
-   <TextField fx:id="textToTranslateField" layoutX="8.0" layoutY="201.0" prefHeight="68.0" prefWidth="300.0" promptText="Input text here" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="201.0">
+   <TextField fx:id="textToTranslateField" layoutX="8.0" layoutY="201.0" prefHeight="68.0" prefWidth="300.0" promptText="Input text here" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="201.0">
       <font>
          <Font size="18.0" />
       </font>
    </TextField>
-   <TextField fx:id="translatedTextField" editable="false" layoutX="408.0" layoutY="201.0" prefHeight="68.0" prefWidth="300.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="201.0">
+   <TextField fx:id="translatedTextField" editable="false" layoutX="408.0" layoutY="201.0" prefHeight="68.0" prefWidth="300.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="201.0">
       <font>
          <Font size="18.0" />
       </font>

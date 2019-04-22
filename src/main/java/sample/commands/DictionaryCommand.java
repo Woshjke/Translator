@@ -17,11 +17,13 @@ public class DictionaryCommand implements Command {
 
     private Translator translator;
 
+
     public DictionaryCommand(Translator translator) {
         this.translator = translator;
     }
 
-    private boolean oneWordChecker(String string) {
+
+    private boolean isOneWord(String string) {
         if (string.isEmpty()) {
             return false;
         }
@@ -39,27 +41,29 @@ public class DictionaryCommand implements Command {
                     protected Void call() {
                         TranslatorUIController controller = AppStarter.getLoader().getController();
                         Map<String, String> langMap = controller.getLangMap();
-                        String sourceLangAbr = "";
-                        String targetLangAbr = "";
                         String textToTranslate = controller.getTextToTranslateField().getText();
 
-                        if (!oneWordChecker(textToTranslate)) {
+                        if (!isOneWord(textToTranslate)) {
                             Platform.runLater(() -> new Message("Input one word!", Alert.AlertType.ERROR).show());
                             return null;
                         }
 
+                        String sourceLangAbr = "";
+                        String targetLangAbr = "";
+                        String selectedSourceLang = controller.getSourceLanguage().getValue();
+                        String selectedTargetLang = controller.getTargetLanguage().getValue();
                         for (String iter : langMap.keySet()) {
-                            if (langMap.get(iter).equals(controller.getSourceLanguage().getValue())) {
+                            if (langMap.get(iter).equals(selectedSourceLang)) {
                                 sourceLangAbr = iter;
                             }
-                            if (langMap.get(iter).equals(controller.getTargetLanguage().getValue())) {
+                            if (langMap.get(iter).equals(selectedTargetLang)) {
                                 targetLangAbr = iter;
                             }
                         }
 
                         try {
-                            String lang = sourceLangAbr + "-" + targetLangAbr;
-                            DictionaryResponse response = translator.getFromDictionary(lang, textToTranslate);
+                            String translationDirection = sourceLangAbr + "-" + targetLangAbr;
+                            DictionaryResponse response = translator.getFromDictionary(translationDirection, textToTranslate);
                             Platform.runLater(() -> new Message(response.toString(), Alert.AlertType.INFORMATION).show());
                         } catch (IOException e) {
                             Platform.runLater(() -> new Message(e.getMessage(), Alert.AlertType.ERROR).show());
