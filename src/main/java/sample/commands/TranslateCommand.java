@@ -27,29 +27,41 @@ public class TranslateCommand implements Command {
     }
 
     private void writeLog(String textToTranslate, String translatedText, String sourceLangAbr, String targetLangAbr) {
-        try {
-            File file = new File("log.txt");
-            boolean writable = file.setWritable(true);
-            if (!writable) {
-                Platform.runLater(() -> new Message("Cannot set file writable!", Alert.AlertType.ERROR).show());
+        File file = new File("log.txt");
+        synchronized (file) {
+            try {
+                boolean writable = file.setWritable(true);
+                if (!writable) {
+                    Platform.runLater(() -> new Message("Cannot set file writable!", Alert.AlertType.ERROR).show());
+                }
+                FileOutputStream log = new FileOutputStream(file, true);
+                log.write(sourceLangAbr.getBytes());
+                log.write(": ".getBytes());
+                log.write(textToTranslate.getBytes());
+                log.write(" - ".getBytes());
+                log.write(targetLangAbr.getBytes());
+                log.write(": ".getBytes());
+                log.write(translatedText.getBytes());
+                log.write("\n".getBytes());
+                writable = file.setWritable(false);
+                if (!writable) {
+                    Platform.runLater(() -> new Message("Cannot set file not writable!", Alert.AlertType.ERROR).show());
+                }
+                log.close();
+            } catch (IOException e) {
+                Platform.runLater(() -> new Message(e.getMessage(), Alert.AlertType.ERROR).show());
             }
-            FileOutputStream log = new FileOutputStream(file, true);
-            log.write(sourceLangAbr.getBytes());
-            log.write(": ".getBytes());
-            log.write(textToTranslate.getBytes());
-            log.write(" - ".getBytes());
-            log.write(targetLangAbr.getBytes());
-            log.write(": ".getBytes());
-            log.write(translatedText.getBytes());
-            log.write("\n".getBytes());
-            writable = file.setWritable(false);
-            if (!writable) {
-                Platform.runLater(() -> new Message("Cannot set file not writable!", Alert.AlertType.ERROR).show());
-            }
-            log.close();
-        } catch (IOException e) {
-            Platform.runLater(() -> new Message(e.getMessage(), Alert.AlertType.ERROR).show());
         }
+    }
+
+    private boolean checkConnection() {
+        try {
+            Process process = java.lang.Runtime.getRuntime().exec("ping www.tut.by");
+            return process.waitFor() != 1;
+        } catch (InterruptedException | IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     @Override
@@ -62,8 +74,13 @@ public class TranslateCommand implements Command {
                     protected Void call() {
                         TranslatorUIController controller = AppStarter.getLoader().getController();
 
+//                        if (!checkConnection()) {
+//                            Platform.runLater(() -> new Message("Check your Internet connection", Alert.AlertType.ERROR).show());
+//                            return null;
+//                        }
+
                         try {
-                            Map<String, String> langMap = translator.getLanguages().getLangs();
+                            Map<String, String> langMap = translator.getLanguages().getLanguages();
                             String sourceLanguage = controller.getSourceLanguage().getValue();
                             String targetLanguage = controller.getTargetLanguage().getValue();
                             TextField textToTranslateField = controller.getTextToTranslateField();
@@ -72,10 +89,6 @@ public class TranslateCommand implements Command {
                             RadioButton googleRadioButton = controller.getGoogleRadioButton();
                             String sourceLangAbr = "";
                             String targetLangAbr = "";
-
-                            if (textToTranslateField.getText().isEmpty()) {
-                                Platform.runLater(() -> new Message("Input something", Alert.AlertType.WARNING).show());
-                            }
 
                             for (String iter : langMap.keySet()) {
                                 if (langMap.get(iter).equals(sourceLanguage)) {
@@ -91,7 +104,8 @@ public class TranslateCommand implements Command {
                                         sourceLangAbr, targetLangAbr);
                                 translatedTextField.setText(response.getText());
                             } else if (googleRadioButton.isSelected()) {
-                                String response = translator.translateByGoogle(textToTranslateField.getText(), sourceLangAbr, targetLangAbr);
+                                String response = translator.translateByGoogle(textToTranslateField.getText(),
+                                        sourceLangAbr, targetLangAbr);
                                 translatedTextField.setText(response);
                             }
                             writeLog(textToTranslateField.getText(), translatedTextField.getText(), sourceLangAbr, targetLangAbr);

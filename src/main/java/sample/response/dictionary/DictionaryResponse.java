@@ -1,19 +1,25 @@
 package sample.response.dictionary;
 
-public class DictionaryResponse {
+import com.google.gson.annotations.SerializedName;
+
+public class DictionaryResponse implements Response {
+
+    @SerializedName(value = "head")
     private Object head;
 
-    private DictionaryEntry[] def;
+    @SerializedName(value = "def")
+    private DictionaryEntry[] dictionaryEntries;
 
 
     public DictionaryResponse() {
 
     }
 
-    public DictionaryResponse(Object head, DictionaryEntry[] def) {
+    public DictionaryResponse(Object head, DictionaryEntry[] dictionaryEntries) {
         this.head = head;
-        this.def = def;
+        this.dictionaryEntries = dictionaryEntries;
     }
+
 
     public void setHead(Object head) {
         this.head = head;
@@ -23,18 +29,18 @@ public class DictionaryResponse {
         return head;
     }
 
-    public DictionaryEntry[] getDef() {
-        return def;
+    public DictionaryEntry[] getDictionaryEntries() {
+        return dictionaryEntries;
     }
 
-    public void setDef(DictionaryEntry[] def) {
-        this.def = def;
+    public void setDictionaryEntries(DictionaryEntry[] dictionaryEntries) {
+        this.dictionaryEntries = dictionaryEntries;
     }
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("Словарная статья:\n");
-        for (DictionaryEntry iter : def) {
+        for (DictionaryEntry iter : dictionaryEntries) {
             stringBuilder.append(iter.toString());
         }
         return stringBuilder.toString();

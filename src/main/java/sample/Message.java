@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
+/**
+ * Создает и показывает окно требуемого типа с заданной информацией
+ */
 public class Message {
 
     private String content;
@@ -21,18 +23,23 @@ public class Message {
     }
 
     private void writeErrorsLog(String content) {
-        try {
-            File file = new File("error.txt");
-            FileOutputStream fileOutputStream = new FileOutputStream(file, true);
-            fileOutputStream.write("Error: ".getBytes());
-            fileOutputStream.write(content.getBytes());
-            fileOutputStream.write("\n".getBytes());
-            fileOutputStream.close();
-        } catch (IOException e) {
-            new Message(e.getMessage(), Alert.AlertType.ERROR);
+        File file = new File("error.txt");
+        synchronized (file) {
+            try {
+                FileOutputStream fileOutputStream = new FileOutputStream(file, true);
+                fileOutputStream.write("Error: ".getBytes());
+                fileOutputStream.write(content.getBytes());
+                fileOutputStream.write("\n".getBytes());
+                fileOutputStream.close();
+            } catch (IOException e) {
+                new Message(e.getMessage(), Alert.AlertType.ERROR);
+            }
         }
     }
 
+    /**
+     * Создает окно с данными текущего объекта и показвает их на экране
+     */
     public void show() {
         TextArea textArea = new TextArea(content);
         textArea.setStyle("-fx-font-size: 15px");

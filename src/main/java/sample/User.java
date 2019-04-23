@@ -2,6 +2,9 @@ package sample;
 
 import sample.commands.Command;
 
+/**
+ * Класс-Invoker, хранящий команды и иннициализирующий их выполнение
+ */
 public class User {
 
     private Command translate;

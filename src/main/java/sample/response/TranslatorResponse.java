@@ -1,10 +1,19 @@
 package sample.response;
 
+import com.google.gson.annotations.SerializedName;
+import sample.response.dictionary.Response;
+
 import java.util.Arrays;
 
-public class TranslatorResponse {
+public class TranslatorResponse implements Response {
+
+    @SerializedName(value = "code")
     private String code;
-    private String lang;
+
+    @SerializedName(value = "lang")
+    private String translationDirection;
+
+    @SerializedName(value = "text")
     private String[] text;
 
     public TranslatorResponse() {
@@ -13,7 +22,7 @@ public class TranslatorResponse {
 
     public TranslatorResponse(String code, String lang, String[] text) {
         this.code = code;
-        this.lang = lang;
+        this.translationDirection = lang;
         this.text = text;
     }
 
@@ -25,12 +34,12 @@ public class TranslatorResponse {
         this.code = code;
     }
 
-    public String getLang() {
-        return lang;
+    public String getTranslationDirection() {
+        return translationDirection;
     }
 
-    public void setLang(String lang) {
-        this.lang = lang;
+    public void setTranslationDirection(String translationDirection) {
+        this.translationDirection = translationDirection;
     }
 
     public String getText() { return Arrays.toString(text).replaceAll("[\\[\\]\"]", ""); }
@@ -43,7 +52,7 @@ public class TranslatorResponse {
     public String toString() {
         return  "TranslatorResponse {" +
                 "Код операции: '" + code + '\'' +
-                ", Язык перевода: '" + lang + '\'' +
+                ", Язык перевода: '" + translationDirection + '\'' +
                 ", Переведенный текст: " + getText() +
                 '}';
     }

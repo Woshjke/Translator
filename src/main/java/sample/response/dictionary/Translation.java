@@ -1,15 +1,31 @@
 package sample.response.dictionary;
 
-public class Translation {
-    private String text;
-    private String num;
-    private String pos;
-    private String gen;
+import com.google.gson.annotations.SerializedName;
 
-    private Translation[] tr;
-    private Synonym[] syn;
-    private Mean[] mean;
-    private Example[] ex;
+public class Translation {
+    @SerializedName(value = "text")
+    private String text;
+
+    @SerializedName(value = "num")
+    private String number;
+
+    @SerializedName(value = "pos")
+    private String partOfSpeech;
+
+    @SerializedName(value = "gen")
+    private String generation;
+
+    @SerializedName(value = "tr")
+    private Translation[] translations;
+
+    @SerializedName(value = "syn")
+    private Synonym[] synonyms;
+
+    @SerializedName(value = "mean")
+    private Mean[] means;
+
+    @SerializedName(value = "ex")
+    private Example[] examples;
 
     public Translation() {
 
@@ -17,14 +33,15 @@ public class Translation {
 
     public Translation(String text, String num, String pos, String gen, Translation[] tr, Synonym[] syn, Mean[] mean, Example[] ex) {
         this.text = text;
-        this.num = num;
-        this.pos = pos;
-        this.gen = gen;
-        this.tr = tr;
-        this.syn = syn;
-        this.mean = mean;
-        this.ex = ex;
+        this.number = num;
+        this.partOfSpeech = pos;
+        this.generation = gen;
+        this.translations = tr;
+        this.synonyms = syn;
+        this.means = mean;
+        this.examples = ex;
     }
+
 
     public String getText() {
         return text;
@@ -34,86 +51,86 @@ public class Translation {
         this.text = text;
     }
 
-    public String getNum() {
-        return num;
+    public String getNumber() {
+        return number;
     }
 
-    public void setNum(String num) {
-        this.num = num;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
-    public String getPos() {
-        return pos;
+    public String getPartOfSpeech() {
+        return partOfSpeech;
     }
 
-    public void setPos(String pos) {
-        this.pos = pos;
+    public void setPartOfSpeech(String partOfSpeech) {
+        this.partOfSpeech = partOfSpeech;
     }
 
-    public String getGen() {
-        return gen;
+    public String getGeneration() {
+        return generation;
     }
 
-    public void setGen(String gen) {
-        this.gen = gen;
+    public void setGeneration(String generation) {
+        this.generation = generation;
     }
 
-    public Translation[] getTr() {
-        return tr;
+    public Translation[] getTranslations() {
+        return translations;
     }
 
-    public void setTr(Translation[] tr) {
-        this.tr = tr;
+    public void setTranslations(Translation[] translations) {
+        this.translations = translations;
     }
 
-    public Synonym[] getSyn() {
-        return syn;
+    public Synonym[] getSynonyms() {
+        return synonyms;
     }
 
-    public void setSyn(Synonym[] syn) {
-        this.syn = syn;
+    public void setSynonyms(Synonym[] synonyms) {
+        this.synonyms = synonyms;
     }
 
-    public Mean[] getMean() {
-        return mean;
+    public Mean[] getMeans() {
+        return means;
     }
 
-    public void setMean(Mean[] mean) {
-        this.mean = mean;
+    public void setMeans(Mean[] means) {
+        this.means = means;
     }
 
-    public Example[] getEx() {
-        return ex;
+    public Example[] getExamples() {
+        return examples;
     }
 
-    public void setEx(Example[] ex) {
-        this.ex = ex;
+    public void setExamples(Example[] examples) {
+        this.examples = examples;
     }
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("Перевод:\n");
         if (text != null) { stringBuilder.append("\t\tТекст: ").append(text).append("\n"); }
-        if (num != null) { stringBuilder.append("\t\tЧисло: ").append(num).append("\n"); }
-        if (pos != null) { stringBuilder.append("\t\tЧасть речи: ").append(pos).append("\n"); }
-        if (gen != null) { stringBuilder.append("\t\tРод: ").append(gen).append("\n"); }
-        if (tr != null) {
-            for (Translation iter : tr) {
+        if (number != null) { stringBuilder.append("\t\tЧисло: ").append(number).append("\n"); }
+        if (partOfSpeech != null) { stringBuilder.append("\t\tЧасть речи: ").append(partOfSpeech).append("\n"); }
+        if (generation != null) { stringBuilder.append("\t\tРод: ").append(generation).append("\n"); }
+        if (translations != null) {
+            for (Translation iter : translations) {
                 stringBuilder.append(iter);
             }
         }
-        if (syn != null) {
-            for (Synonym iter : syn) {
+        if (synonyms != null) {
+            for (Synonym iter : synonyms) {
                 stringBuilder.append(iter);
             }
         }
-        if (mean != null) {
-            for (Mean iter : mean) {
+        if (means != null) {
+            for (Mean iter : means) {
                 stringBuilder.append(iter);
             }
         }
-        if (ex != null) {
-            for (Example iter : ex) {
+        if (examples != null) {
+            for (Example iter : examples) {
                 stringBuilder.append(iter);
             }
         }

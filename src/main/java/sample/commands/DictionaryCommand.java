@@ -31,6 +31,16 @@ public class DictionaryCommand implements Command {
         return words.length <= 1;
     }
 
+    private boolean checkConnection() {
+        try {
+            Process process = java.lang.Runtime.getRuntime().exec("ping www.tut.by");
+            return process.waitFor() != 1;
+        } catch (InterruptedException | IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     @Override
     public void execute() {
         Service<Void> backgroundService = new Service<Void>() {
@@ -39,6 +49,12 @@ public class DictionaryCommand implements Command {
                 return new Task<Void>() {
                     @Override
                     protected Void call() {
+
+                        if (!checkConnection()) {
+                            Platform.runLater(() -> new Message("Check your Internet connection", Alert.AlertType.ERROR).show());
+                            return null;
+                        }
+
                         TranslatorUIController controller = AppStarter.getLoader().getController();
                         Map<String, String> langMap = controller.getLangMap();
                         String textToTranslate = controller.getTextToTranslateField().getText();

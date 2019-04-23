@@ -30,14 +30,15 @@ public class GetLanguagesCommand implements Command {
                     protected Void call() {
                         Map<String, String> langMap;
                         TranslatorUIController controller = AppStarter.getLoader().getController();
+
                         try {
-                            langMap = translator.getLanguages().getLangs();
+                            langMap = translator.getLanguages().getLanguages();
                         } catch (IOException e) {
                             Platform.runLater(() -> new Message(
-                                    "Cannot get languages! Check your Internet connection!", Alert.AlertType.ERROR).show()
-                            );
+                                    "Cannot get languages! Check your Internet connection!", Alert.AlertType.ERROR).show());
                             return null;
                         }
+
                         langMap.values().forEach(x -> {
                             controller.getSourceLanguage().getItems().add(x);
                             controller.getTargetLanguage().getItems().add(x);

@@ -11,7 +11,9 @@ import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-
+/**
+ * Класс-контролер интерфейса. Здесь инициализируются элементы интерфейса и ставятся обработчики событий на кнопки.
+ */
 public class TranslatorUIController {
     @FXML
     private ResourceBundle resources;
