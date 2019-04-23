@@ -1,75 +1,85 @@
 package sample.response.dictionary;
 
+import com.google.gson.annotations.SerializedName;
+
 public class DictionaryEntry {
 
-    private Translation[] tr;
-    private Synonym[] syn;
-    private Mean[] mean;
-    private Example[] ex;
+
+    @SerializedName(value = "tr")
+    private Translation[] translations;
+
+    @SerializedName(value = "syn")
+    private Synonym[] synonyms;
+
+    @SerializedName(value = "mean")
+    private Mean[] means;
+
+    @SerializedName(value = "ex")
+    private Example[] examples;
 
     public DictionaryEntry() {
 
     }
 
     public DictionaryEntry(Translation[] tr, Synonym[] syn, Mean[] mean, Example[] ex) {
-        this.tr = tr;
-        this.syn = syn;
-        this.mean = mean;
-        this.ex = ex;
+        this.translations = tr;
+        this.synonyms = syn;
+        this.means = mean;
+        this.examples = ex;
     }
 
-    public Translation[] getTr() {
-        return tr;
+    public Translation[] getTranslations() {
+        return translations;
     }
 
-    public void setTr(Translation[] tr) {
-        this.tr = tr;
+    public void setTranslations(Translation[] translations) {
+        this.translations = translations;
     }
 
-    public Synonym[] getSyn() {
-        return syn;
+    public Synonym[] getSynonyms() {
+        return synonyms;
     }
 
-    public void setSyn(Synonym[] syn) {
-        this.syn = syn;
+    public void setSynonyms(Synonym[] synonyms) {
+        this.synonyms = synonyms;
     }
 
-    public Mean[] getMean() {
-        return mean;
+    public Mean[] getMeans() {
+        return means;
     }
 
-    public void setMean(Mean[] mean) {
-        this.mean = mean;
+    public void setMeans(Mean[] means) {
+        this.means = means;
     }
 
-    public Example[] getEx() {
-        return ex;
+    public Example[] getExamples() {
+        return examples;
     }
 
-    public void setEx(Example[] ex) {
-        this.ex = ex;
+    public void setExamples(Example[] examples) {
+        this.examples = examples;
     }
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        if (tr != null) {
-            for (Translation iter : tr) {
+        if (translations != null) {
+            for (Translation iter : translations) {
                 stringBuilder.append(iter);
             }
         }
-        if (syn != null) {
-            for (Synonym iter : syn) {
+        if (synonyms != null) {
+            for (Synonym iter : synonyms) {
                 stringBuilder.append(iter);
             }
         }
-        if (mean != null) {
-            for (Mean iter : mean) {
+        if (means != null) {
+            for (Mean iter : means) {
                 stringBuilder.append(iter);
             }
         }
-        if (ex != null) {
-            for (Example iter : ex) {
+        if (examples != null) {
+            for (Example iter : examples) {
                 stringBuilder.append(iter);
             }
         }

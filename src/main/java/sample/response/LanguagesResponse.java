@@ -1,43 +1,49 @@
 package sample.response;
 
+import com.google.gson.annotations.SerializedName;
+import sample.response.dictionary.Response;
+
 import java.util.Arrays;
 import java.util.Map;
 
-public class LanguagesResponse {
-    private String[] dirs;
+public class LanguagesResponse implements Response {
 
-    private Map<String,String> langs;
+    @SerializedName(value = "dirs")
+    private String[] translationDirections;
+
+    @SerializedName(value = "langs")
+    private Map<String,String> languages;
 
     public LanguagesResponse() {
 
     }
 
     public LanguagesResponse(String[] dirs, Map<String, String> langs) {
-        this.dirs = dirs;
-        this.langs = langs;
+        this.translationDirections = dirs;
+        this.languages = langs;
     }
 
-    public String[] getDirs() {
-        return dirs;
+    public String[] getTranslationDirections() {
+        return translationDirections;
     }
 
-    public void setDirs(String[] dirs) {
-        this.dirs = dirs;
+    public void setTranslationDirections(String[] translationDirections) {
+        this.translationDirections = translationDirections;
     }
 
-    public Map<String, String> getLangs() {
-        return langs;
+    public Map<String, String> getLanguages() {
+        return languages;
     }
 
-    public void setLangs(Map<String, String> langs) {
-        this.langs = langs;
+    public void setLanguages(Map<String, String> languages) {
+        this.languages = languages;
     }
 
     @Override
     public String toString() {
         return "LanguagesResponse{" +
-                "dirs=" + Arrays.toString(dirs) +
-                ", langs=" + langs +
+                "translationDirections=" + Arrays.toString(translationDirections) +
+                ", languages=" + languages +
                 '}';
     }
 }

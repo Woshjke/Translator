@@ -11,6 +11,10 @@ import sample.translator.Translator;
 
 import java.io.IOException;
 
+
+/**
+ * Точка входа в приложение. Создает окно, инициализирует класс-receiver и класс-Invoker
+ */
 public class AppStarter extends Application {
 
     private static Translator translator = new Translator();
@@ -58,7 +62,8 @@ public class AppStarter extends Application {
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException e) {
-            System.out.println("Cannot start program!" + e.getMessage());
+            System.out.println("Cannot start program!");
+            e.printStackTrace();
         }
     }
 }
