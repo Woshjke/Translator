@@ -1,0 +1,2021 @@
+
+Error: Input something
+Error: 403 Forbidden
+{
+  "error": {
+    "code": 403,
+    "message": "The request is missing a valid API TRANSLATOR_KEY.",
+    "errors": [
+      {
+        "message": "The request is missing a valid API TRANSLATOR_KEY.",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+Error: 403 Forbidden
+{
+  "error": {
+    "code": 403,
+    "message": "The request is missing a valid API TRANSLATOR_KEY.",
+    "errors": [
+      {
+        "message": "The request is missing a valid API TRANSLATOR_KEY.",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+Error: dictionaryEntries:
+Текст - death
+Часть речи - существительное
+Текст - dying
+Часть речи - существительное
+
+Текст - demise
+Часть речи - существительное
+
+Текст - decease
+Часть речи - существительное
+
+Текст - doom
+Часть речи - существительное
+
+Текст - гибель
+
+Текст - умирание
+
+Текст - кончина
+
+Текст - причина смерти
+Текст - cause of death
+
+
+Текст - неминуемая смерть
+Текст - imminent demise
+
+
+
+Текст - die
+Часть речи - существительное
+Текст - умирающий
+
+Текст - преждевременная смерть
+Текст - die prematurely
+
+
+
+Текст - mors
+Часть речи - существительное
+
+Текст - dead
+Часть речи - существительное
+Текст - смерть девушки
+Текст - dead girl
+
+
+
+Текст - end
+Часть речи - существительное
+Текст - конец
+
+
+Текст - passing
+Часть речи - существительное
+Текст - прохождение
+
+
+Текст - grave
+Часть речи - существительное
+Текст - могила
+
+
+Текст - fatality
+Часть речи - существительное
+Текст - смертность
+
+
+Текст - fate
+Часть речи - существительное
+Текст - судьба
+
+
+Текст - dissolution
+Часть речи - существительное
+Текст - растворение
+
+
+Текст - departure
+Часть речи - существительное
+Текст - exit
+Часть речи - существительное
+
+Текст - отъезд
+
+Текст - уход
+
+
+
+Error: dictionaryEntries:
+Tr{text='death', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=[Syn{text='dying', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=null}, Syn{text='demise', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=null}, Syn{text='decease', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=null}, Syn{text='doom', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=null}], means=[Mean{text='гибель', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}, Mean{text='умирание', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}, Mean{text='кончина', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=[Ex{text='причина смерти', number='null', partOfSpeech='null', generation='null', translations=[Tr{text='cause of death', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], synonyms=null, means=null, examples=null}, Ex{text='неминуемая смерть', number='null', partOfSpeech='null', generation='null', translations=[Tr{text='imminent demise', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], synonyms=null, means=null, examples=null}]}
+Tr{text='die', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='умирающий', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=[Ex{text='преждевременная смерть', number='null', partOfSpeech='null', generation='null', translations=[Tr{text='die prematurely', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], synonyms=null, means=null, examples=null}]}
+Tr{text='mors', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=null}
+Tr{text='dead', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=[Ex{text='смерть девушки', number='null', partOfSpeech='null', generation='null', translations=[Tr{text='dead girl', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], synonyms=null, means=null, examples=null}]}
+Tr{text='end', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='конец', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+Tr{text='passing', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='прохождение', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+Tr{text='grave', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='могила', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+Tr{text='fatality', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='смертность', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+Tr{text='fate', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='судьба', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+Tr{text='dissolution', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=[Mean{text='растворение', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+Tr{text='departure', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=[Syn{text='exit', number='null', partOfSpeech='существительное', generation='null', translations=null, synonyms=null, means=null, examples=null}], means=[Mean{text='отъезд', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}, Mean{text='уход', number='null', partOfSpeech='null', generation='null', translations=null, synonyms=null, means=null, examples=null}], examples=null}
+
+Error: Переводы:
+	text='death
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=[Синонимы:
+	text='dying
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+, Синонимы:
+	text='demise
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+, Синонимы:
+	text='decease
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+, Синонимы:
+	text='doom
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	means=[Значения:
+	text='гибель
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+, Значения:
+	text='умирание
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+, Значения:
+	text='кончина
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=[Примеры использования:
+	text='причина смерти
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=[Переводы:
+	text='cause of death
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	synonyms=null
+	means=null
+	examples=null
+, Примеры использования:
+	text='неминуемая смерть
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=[Переводы:
+	text='imminent demise
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	synonyms=null
+	means=null
+	examples=null
+]
+
+Переводы:
+	text='die
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='умирающий
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=[Примеры использования:
+	text='преждевременная смерть
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=[Переводы:
+	text='die prematurely
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	synonyms=null
+	means=null
+	examples=null
+]
+
+Переводы:
+	text='mors
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+
+Переводы:
+	text='dead
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=[Примеры использования:
+	text='смерть девушки
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=[Переводы:
+	text='dead girl
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	synonyms=null
+	means=null
+	examples=null
+]
+
+Переводы:
+	text='end
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='конец
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+Переводы:
+	text='passing
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='прохождение
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+Переводы:
+	text='grave
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='могила
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+Переводы:
+	text='fatality
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='смертность
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+Переводы:
+	text='fate
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='судьба
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+Переводы:
+	text='dissolution
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=[Значения:
+	text='растворение
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+Переводы:
+	text='departure
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=[Синонимы:
+	text='exit
+	number='null
+	partOfSpeech='существительное
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	means=[Значения:
+	text='отъезд
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+, Значения:
+	text='уход
+	number='null
+	partOfSpeech='null
+	generation='null
+	translations=null
+	synonyms=null
+	means=null
+	examples=null
+]
+	examples=null
+
+
+Error: Переводы:
+	Текст: death
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	[Синонимы:
+	Текст: dying
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	null
+, Синонимы:
+	Текст: demise
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	null
+, Синонимы:
+	Текст: decease
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	null
+, Синонимы:
+	Текст: doom
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	null
+]
+	[Значения:
+	Текст: гибель
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+, Значения:
+	Текст: умирание
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+, Значения:
+	Текст: кончина
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	[Примеры использования:
+	Текст: причина смерти
+	Число: null
+	Часть речи: null
+	Род: null
+	[Переводы:
+	Текст: cause of death
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+	null
+	null
+, Примеры использования:
+	Текст: неминуемая смерть
+	Число: null
+	Часть речи: null
+	Род: null
+	[Переводы:
+	Текст: imminent demise
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+	null
+	null
+]
+
+Переводы:
+	Текст: die
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: умирающий
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	[Примеры использования:
+	Текст: преждевременная смерть
+	Число: null
+	Часть речи: null
+	Род: null
+	[Переводы:
+	Текст: die prematurely
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+	null
+	null
+]
+
+Переводы:
+	Текст: mors
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	null
+
+Переводы:
+	Текст: dead
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	[Примеры использования:
+	Текст: смерть девушки
+	Число: null
+	Часть речи: null
+	Род: null
+	[Переводы:
+	Текст: dead girl
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+	null
+	null
+]
+
+Переводы:
+	Текст: end
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: конец
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+Переводы:
+	Текст: passing
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: прохождение
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+Переводы:
+	Текст: grave
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: могила
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+Переводы:
+	Текст: fatality
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: смертность
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+Переводы:
+	Текст: fate
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: судьба
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+Переводы:
+	Текст: dissolution
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	[Значения:
+	Текст: растворение
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+Переводы:
+	Текст: departure
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	[Синонимы:
+	Текст: exit
+	Число: null
+	Часть речи: существительное
+	Род: null
+	null
+	null
+	null
+	null
+]
+	[Значения:
+	Текст: отъезд
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+, Значения:
+	Текст: уход
+	Число: null
+	Часть речи: null
+	Род: null
+	null
+	null
+	null
+	null
+]
+	null
+
+
+Error: Переводы:
+	Текст: death
+	Часть речи: существительное
+	[Синонимы:
+	Текст: dying
+	Часть речи: существительное
+, Синонимы:
+	Текст: demise
+	Часть речи: существительное
+, Синонимы:
+	Текст: decease
+	Часть речи: существительное
+, Синонимы:
+	Текст: doom
+	Часть речи: существительное
+]
+	[Значения:
+	Текст: гибель
+, Значения:
+	Текст: умирание
+, Значения:
+	Текст: кончина
+]
+	[Примеры использования:
+	Текст: причина смерти
+	[Переводы:
+	Текст: cause of death
+]
+, Примеры использования:
+	Текст: неминуемая смерть
+	[Переводы:
+	Текст: imminent demise
+]
+]
+
+Переводы:
+	Текст: die
+	Часть речи: существительное
+	[Значения:
+	Текст: умирающий
+]
+	[Примеры использования:
+	Текст: преждевременная смерть
+	[Переводы:
+	Текст: die prematurely
+]
+]
+
+Переводы:
+	Текст: mors
+	Часть речи: существительное
+
+Переводы:
+	Текст: dead
+	Часть речи: существительное
+	[Примеры использования:
+	Текст: смерть девушки
+	[Переводы:
+	Текст: dead girl
+]
+]
+
+Переводы:
+	Текст: end
+	Часть речи: существительное
+	[Значения:
+	Текст: конец
+]
+
+Переводы:
+	Текст: passing
+	Часть речи: существительное
+	[Значения:
+	Текст: прохождение
+]
+
+Переводы:
+	Текст: grave
+	Часть речи: существительное
+	[Значения:
+	Текст: могила
+]
+
+Переводы:
+	Текст: fatality
+	Часть речи: существительное
+	[Значения:
+	Текст: смертность
+]
+
+Переводы:
+	Текст: fate
+	Часть речи: существительное
+	[Значения:
+	Текст: судьба
+]
+
+Переводы:
+	Текст: dissolution
+	Часть речи: существительное
+	[Значения:
+	Текст: растворение
+]
+
+Переводы:
+	Текст: departure
+	Часть речи: существительное
+	[Синонимы:
+	Текст: exit
+	Часть речи: существительное
+]
+	[Значения:
+	Текст: отъезд
+, Значения:
+	Текст: уход
+]
+
+
+Error: Переводы:
+	Текст: death
+	Часть речи: существительное
+Синонимы:
+	Текст: dying
+	Часть речи: существительное
+Синонимы:
+	Текст: demise
+	Часть речи: существительное
+Синонимы:
+	Текст: decease
+	Часть речи: существительное
+Синонимы:
+	Текст: doom
+	Часть речи: существительное
+Значения:
+	Текст: гибель
+Значения:
+	Текст: умирание
+Значения:
+	Текст: кончина
+Примеры использования:
+	Текст: причина смерти
+Переводы:
+	Текст: cause of death
+Примеры использования:
+	Текст: неминуемая смерть
+Переводы:
+	Текст: imminent demise
+
+Переводы:
+	Текст: die
+	Часть речи: существительное
+Значения:
+	Текст: умирающий
+Примеры использования:
+	Текст: преждевременная смерть
+Переводы:
+	Текст: die prematurely
+
+Переводы:
+	Текст: mors
+	Часть речи: существительное
+
+Переводы:
+	Текст: dead
+	Часть речи: существительное
+Примеры использования:
+	Текст: смерть девушки
+Переводы:
+	Текст: dead girl
+
+Переводы:
+	Текст: end
+	Часть речи: существительное
+Значения:
+	Текст: конец
+
+Переводы:
+	Текст: passing
+	Часть речи: существительное
+Значения:
+	Текст: прохождение
+
+Переводы:
+	Текст: grave
+	Часть речи: существительное
+Значения:
+	Текст: могила
+
+Переводы:
+	Текст: fatality
+	Часть речи: существительное
+Значения:
+	Текст: смертность
+
+Переводы:
+	Текст: fate
+	Часть речи: существительное
+Значения:
+	Текст: судьба
+
+Переводы:
+	Текст: dissolution
+	Часть речи: существительное
+Значения:
+	Текст: растворение
+
+Переводы:
+	Текст: departure
+	Часть речи: существительное
+Синонимы:
+	Текст: exit
+	Часть речи: существительное
+Значения:
+	Текст: отъезд
+Значения:
+	Текст: уход
+
+
+Error: Перевод:
+	Текст: death
+	Часть речи: существительное
+Синоним:
+	Текст: dying
+	Часть речи: существительное
+Синоним:
+	Текст: demise
+	Часть речи: существительное
+Синоним:
+	Текст: decease
+	Часть речи: существительное
+Синоним:
+	Текст: doom
+	Часть речи: существительное
+Значение:
+	Текст: гибель
+Значение:
+	Текст: умирание
+Значение:
+	Текст: кончина
+Пример использования:
+	Текст: причина смерти
+Перевод:
+	Текст: cause of death
+Пример использования:
+	Текст: неминуемая смерть
+Перевод:
+	Текст: imminent demise
+
+Перевод:
+	Текст: die
+	Часть речи: существительное
+Значение:
+	Текст: умирающий
+Пример использования:
+	Текст: преждевременная смерть
+Перевод:
+	Текст: die prematurely
+
+Перевод:
+	Текст: mors
+	Часть речи: существительное
+
+Перевод:
+	Текст: dead
+	Часть речи: существительное
+Пример использования:
+	Текст: смерть девушки
+Перевод:
+	Текст: dead girl
+
+Перевод:
+	Текст: end
+	Часть речи: существительное
+Значение:
+	Текст: конец
+
+Перевод:
+	Текст: passing
+	Часть речи: существительное
+Значение:
+	Текст: прохождение
+
+Перевод:
+	Текст: grave
+	Часть речи: существительное
+Значение:
+	Текст: могила
+
+Перевод:
+	Текст: fatality
+	Часть речи: существительное
+Значение:
+	Текст: смертность
+
+Перевод:
+	Текст: fate
+	Часть речи: существительное
+Значение:
+	Текст: судьба
+
+Перевод:
+	Текст: dissolution
+	Часть речи: существительное
+Значение:
+	Текст: растворение
+
+Перевод:
+	Текст: departure
+	Часть речи: существительное
+Синоним:
+	Текст: exit
+	Часть речи: существительное
+Значение:
+	Текст: отъезд
+Значение:
+	Текст: уход
+
+
+Error: Словарная статья:
+	Перевод:
+	Текст: death
+	Часть речи: существительное
+Синоним:
+	Текст: dying
+	Часть речи: существительное
+Синоним:
+	Текст: demise
+	Часть речи: существительное
+Синоним:
+	Текст: decease
+	Часть речи: существительное
+Синоним:
+	Текст: doom
+	Часть речи: существительное
+Значение:
+	Текст: гибель
+Значение:
+	Текст: умирание
+Значение:
+	Текст: кончина
+Пример использования:
+	Текст: причина смерти
+Перевод:
+	Текст: cause of death
+Пример использования:
+	Текст: неминуемая смерть
+Перевод:
+	Текст: imminent demise
+Перевод:
+	Текст: die
+	Часть речи: существительное
+Значение:
+	Текст: умирающий
+Пример использования:
+	Текст: преждевременная смерть
+Перевод:
+	Текст: die prematurely
+Перевод:
+	Текст: mors
+	Часть речи: существительное
+Перевод:
+	Текст: dead
+	Часть речи: существительное
+Пример использования:
+	Текст: смерть девушки
+Перевод:
+	Текст: dead girl
+Перевод:
+	Текст: end
+	Часть речи: существительное
+Значение:
+	Текст: конец
+Перевод:
+	Текст: passing
+	Часть речи: существительное
+Значение:
+	Текст: прохождение
+Перевод:
+	Текст: grave
+	Часть речи: существительное
+Значение:
+	Текст: могила
+Перевод:
+	Текст: fatality
+	Часть речи: существительное
+Значение:
+	Текст: смертность
+Перевод:
+	Текст: fate
+	Часть речи: существительное
+Значение:
+	Текст: судьба
+Перевод:
+	Текст: dissolution
+	Часть речи: существительное
+Значение:
+	Текст: растворение
+Перевод:
+	Текст: departure
+	Часть речи: существительное
+Синоним:
+	Текст: exit
+	Часть речи: существительное
+Значение:
+	Текст: отъезд
+Значение:
+	Текст: уход
+
+Error: Словарная статья:
+	Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Перевод:
+		Текст: cause of death
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: imminent demise
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: die prematurely
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: dead girl
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+Error: Словарная статья:
+Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Перевод:
+		Текст: cause of death
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: imminent demise
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: die prematurely
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: dead girl
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+Error: Словарная статья:
+Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Перевод:
+		Текст: cause of death
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: imminent demise
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: die prematurely
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: dead girl
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+
+
+
+
+Error: Словарная статья:
+Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+Error: Словарная статья:
+Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Перевод:
+		Текст: cause of death
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: imminent demise
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: die prematurely
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: dead girl
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+Error: Словарная статья:
+Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Перевод:
+		Текст: cause of death
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: imminent demise
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: die prematurely
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: dead girl
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+Error: Словарная статья:
+Перевод:
+		Текст: death
+		Часть речи: существительное
+Синоним:
+		Текст: dying
+		Часть речи: существительное
+Синоним:
+		Текст: demise
+		Часть речи: существительное
+Синоним:
+		Текст: decease
+		Часть речи: существительное
+Синоним:
+		Текст: doom
+		Часть речи: существительное
+Значение:
+		Текст: гибель
+Значение:
+		Текст: умирание
+Значение:
+		Текст: кончина
+Пример использования:
+		Текст: причина смерти
+Перевод:
+		Текст: cause of death
+Пример использования:
+		Текст: неминуемая смерть
+Перевод:
+		Текст: imminent demise
+Перевод:
+		Текст: die
+		Часть речи: существительное
+Значение:
+		Текст: умирающий
+Пример использования:
+		Текст: преждевременная смерть
+Перевод:
+		Текст: die prematurely
+Перевод:
+		Текст: mors
+		Часть речи: существительное
+Перевод:
+		Текст: dead
+		Часть речи: существительное
+Пример использования:
+		Текст: смерть девушки
+Перевод:
+		Текст: dead girl
+Перевод:
+		Текст: end
+		Часть речи: существительное
+Значение:
+		Текст: конец
+Перевод:
+		Текст: passing
+		Часть речи: существительное
+Значение:
+		Текст: прохождение
+Перевод:
+		Текст: grave
+		Часть речи: существительное
+Значение:
+		Текст: могила
+Перевод:
+		Текст: fatality
+		Часть речи: существительное
+Значение:
+		Текст: смертность
+Перевод:
+		Текст: fate
+		Часть речи: существительное
+Значение:
+		Текст: судьба
+Перевод:
+		Текст: dissolution
+		Часть речи: существительное
+Значение:
+		Текст: растворение
+Перевод:
+		Текст: departure
+		Часть речи: существительное
+Синоним:
+		Текст: exit
+		Часть речи: существительное
+Значение:
+		Текст: отъезд
+Значение:
+		Текст: уход
+
+Error: Input something
+Error: Input something
+Error: Input something
+Error: Cannot get languages! Check your Internet connection!
+Error: translate.yandex.net
+Error: No route to host: connect
+Error: Cannot get languages! Check your Internet connection!
+Error: translate.yandex.net
+Error: translate.yandex.net
+Error: Cannot get languages! Check your Internet connection!
+Error: translate.yandex.net
+Error: Cannot get languages! Check your Internet connection!
+Error: Check your Internet connection
+Error: translate.yandex.net
+Error: Cannot get languages! Check your Internet connection!
+Error: Check your Internet connection
+Error: Check your Internet connection
+Error: Cannot get languages! Check your Internet connection!
+Error: Check your Internet connection
+Error: Check your Internet connection
+Error: Cannot get languages! Check your Internet connection!
+Error: Check your Internet connection
+Error: Check your Internet connection
+Error: Input one word!
+Error: Cannot get languages! Check your Internet connection!
+Error: Check your Internet connection
+Error: Check your Internet connection
+Error: Cannot set file writable!
+Error: Illegal character in URL
+Error: Словарная статья:
+Перевод:
+		Текст: hi
+		Часть речи: существительное
+Синоним:
+		Текст: hello
+		Часть речи: существительное
+Синоним:
+		Текст: salutation
+		Часть речи: существительное
+Значение:
+		Текст: приветствие
+Перевод:
+		Текст: hey
+		Часть речи: существительное
+Перевод:
+		Текст: regards
+		Часть речи: существительное
+Перевод:
+		Текст: hail
+		Часть речи: существительное
+Перевод:
+		Текст: howdy
+		Часть речи: существительное
+Перевод:
+		Текст: remembrance
+		Часть речи: существительное
+
+Error: Cannot get languages! Check your Internet connection!
+Error: Check your Internet connection
+Error: Input something
+Error: Empty text field. Write something!
+Error: Input something
+Error: Empty text field. Write something!
+Error: Input something
+Error: Empty text field. Write something!
+Error: Input something
+Error: Empty text field. Write something!
+Error: Empty text field. Write something!
+Error: Empty text field. Write something!
+Error: 403 Forbidden
+{
+  "error": {
+    "code": 403,
+    "message": "The request is missing a valid API key.",
+    "errors": [
+      {
+        "message": "The request is missing a valid API key.",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+Error: Empty text field. Write something!
+Error: Input one word!
+Error: Словарная статья:
+Перевод:
+		Текст: hi
+		Часть речи: существительное
+Синоним:
+		Текст: hello
+		Часть речи: существительное
+Синоним:
+		Текст: salutation
+		Часть речи: существительное
+Значение:
+		Текст: приветствие
+Перевод:
+		Текст: hey
+		Часть речи: существительное
+Перевод:
+		Текст: regards
+		Часть речи: существительное
+Перевод:
+		Текст: hail
+		Часть речи: существительное
+Перевод:
+		Текст: howdy
+		Часть речи: существительное
+Перевод:
+		Текст: remembrance
+		Часть речи: существительное
+
+Error: Empty text field. Write something!
+Error: 403 Forbidden
+{
+  "error": {
+    "code": 403,
+    "message": "The request is missing a valid API key.",
+    "errors": [
+      {
+        "message": "The request is missing a valid API key.",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+Error: Empty text field. Write something!
+Error: 403 Forbidden
+{
+  "error": {
+    "code": 403,
+    "message": "The request is missing a valid API key.",
+    "errors": [
+      {
+        "message": "The request is missing a valid API key.",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+Error: Empty text field. Write something!
+Error: Словарная статья:
+Перевод:
+		Текст: hi
+		Часть речи: существительное
+Синоним:
+		Текст: hello
+		Часть речи: существительное
+Синоним:
+		Текст: salutation
+		Часть речи: существительное
+Значение:
+		Текст: приветствие
+Перевод:
+		Текст: hey
+		Часть речи: существительное
+Перевод:
+		Текст: regards
+		Часть речи: существительное
+Перевод:
+		Текст: hail
+		Часть речи: существительное
+Перевод:
+		Текст: howdy
+		Часть речи: существительное
+Перевод:
+		Текст: remembrance
+		Часть речи: существительное
+

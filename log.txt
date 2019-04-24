@@ -1,0 +1,33 @@
+ru: Всем привет - en: Hello
+ru: Всем привет - en: Hello
+ru: Всем привет - en: Hello
+en: Hello world - hy: Բարեւ աշխարհ
+en: Hello world - hy: Բարեւ աշխարհ
+en: Hello world - ba: Сәләм донъяға
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru: Привет - en: Hi
+ru: Привет  - en: Hi 
+ru:  - en: ru:  - en: ru:  - en: ru: Привет - en: Hi
+ru: Привет - en: Hi
+ru: Привет мир - en: Hello world
+ru: Привет - ru: Привет
+ru: Привет мир - en: Hello world
+ru: Привет мир - en: Hello world
+ru:  - en: ru: PriverМир - en: PriverМир
+ru: Яндекс козел - en: Yandex goat
+ru: Яндекс - en: Yandex
+ru: Привет мир - en: Hello world
+ru: Яндекс хороший - en: Yandex good
+ru: Козел - en: Goat
+ru: привет мир - en: Hello world
